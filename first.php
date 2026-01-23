@@ -12,12 +12,17 @@ for ($j = 1; $j <= 5; $j++) {
     echo "<br>";
 }
 
-$n = 6;
-for ($i = 5; $i > 0; $i--){
-    $z = $n * $i; 
+
+$n = 5;
+$factorial = 1;
+
+for ($i = 1; $i <= $n; $i++) {
+    $factorial = $factorial * $i; // Multiply step by step
 }
-   
-echo "The multiplication of $n and $i is $z<br>";
+
+echo "The factorial of $n is $factorial";
+?>
+
 
 
 // $a = 5;
