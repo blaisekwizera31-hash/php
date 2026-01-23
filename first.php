@@ -49,5 +49,31 @@ for($i=1;$i<=6;$i++){
 echo "</table>";
 
 
+
+echo "<table width='270px' cellspacing='0'>";
+for($i=1;$i<=8;$i++){
+  echo "<tr>";
+  for($j=1;$j<=8;$j++){
+    $color=(($i+$j)%2==0)?"white":"black";
+    echo "<td height='30px' width='30px' bgcolor='$color'></td>";
+  }
+  echo "</tr>";
+}
+echo "</table>";
+
+
+
+echo "<table border='1'>";
+echo "<tr>";
+for($i=1;$i<=10;$i++){ echo "<th>$i</th>"; }
+echo "</tr>";
+for($i=2;$i<=10;$i++){
+  echo "<tr>";
+  for($j=1;$j<=10;$j++){ echo "<td>".($i*$j)."</td>"; }
+  echo "</tr>";
+}
+echo "</table>";
+
+
 ?>
 
