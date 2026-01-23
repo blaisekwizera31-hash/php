@@ -68,15 +68,21 @@
             <label>First Number:</label>
             <input type="number" name="num1" required>
 
+            <label>Second Number:</label>
+            <input type="number" name="num2" required>
+
             <label>Results:</label>
-            <input name="result" required>
+            <input name="result" value="<?php echo htmlspecialchars($result); ?>" readonly>
+
             <label>Operation:</label>
 
-
-            <input type="button" value="+" id="button" name="operator">
-            <input type="button" value="x" id="button" name="operator">
-            <input type="button" value="-" id="button" name="operator">
-            <input type="button" value="/" id="button" name="operator"> <br>
+<div name="operator">
+    
+                <input type="button" value="+" id="button" name="operator">
+                <input type="button" value="x" id="button" name="operator">
+                <input type="button" value="-" id="button" name="operator">
+                <input type="button" value="/" id="button" name="operator"> <br>
+</div>
 
             <button type="submit" id="button" style=" width: 210px; margin-left: 80px;">Calculate</button>
 
@@ -85,6 +91,8 @@
 
         <div class="result">
             <?php
+            $num1 = $num2 = $result = "";
+
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $num1 = $_POST['num1'];
                 $num2 = $_POST['num2'];
