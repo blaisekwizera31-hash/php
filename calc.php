@@ -43,6 +43,7 @@
             background-color: #28a745;
             color: white;
             border: none;
+            width: 50px;
         }
 
         button:hover,
@@ -67,17 +68,18 @@
             <label>First Number:</label>
             <input type="number" name="num1" required>
 
-            <label>Second Number:</label>
-            <input type="number" name="num2" required>
-
+            <label>Results:</label>
+            <input name="result" required>
             <label>Operation:</label>
 
-            </select>
+
             <input type="button" value="+" id="button" name="operator">
             <input type="button" value="x" id="button" name="operator">
             <input type="button" value="-" id="button" name="operator">
-            <input type="button" value="/" id="button" name="operator">
-            <button type="submit" id="button">Calculate</button>
+            <input type="button" value="/" id="button" name="operator"> <br>
+
+            <button type="submit" id="button" style=" width: 210px; margin-left: 80px;">Calculate</button>
+
 
         </form>
 
