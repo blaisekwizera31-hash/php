@@ -13,8 +13,18 @@ for ($j = 1; $j <= 5; $j++) {
 }
 
 $n = 6;
-for ($i = 6; $i > 0; $i--)
-    $z = $n * $i;
-echo "$z"
-;
-?>
+for ($i = 5; $i > 0; $i--){
+    $z = $n * $i; 
+}
+   
+echo "The multiplication of $n and $i is $z<br>";
+
+
+// $a = 5;
+// $b = 10;
+
+// $result = $a * $b;
+
+// echo "The multiplication of $a and $b is $result";
+
+// ?>
