@@ -68,7 +68,7 @@
 
     <div class="container">
         <h2>Enter Student Marks</h2>
-        <form method="POST" action="">
+        <form method="POST" action=" ">
             <label for="percentage">Percentage:</label>
             <input type="number" name="percentage" id="percentage" min="0" max="100" required>
             <button type="submit">Display Grade</button>
