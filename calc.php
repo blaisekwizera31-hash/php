@@ -51,7 +51,7 @@
 
 <div class="calculator">
     <h2>Simple Calculator</h2>
-    <form method="post" action="">
+    <form method="post" action=" ">
         <label>First Number:</label>
         <input type="number" name="num1" required>
 
