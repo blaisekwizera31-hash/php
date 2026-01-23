@@ -1,3 +1,5 @@
 <?php
- echo "This is the first PHP file.";
+for(i=0; i<5; i++){
+    echo "*"
+}
 ?>
