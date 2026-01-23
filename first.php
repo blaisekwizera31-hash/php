@@ -17,19 +17,26 @@ $n = 5;
 $factorial = 1;
 
 for ($i = 1; $i <= $n; $i++) {
-    $factorial = $factorial * $i; // Multiply step by step
+    $factorial = $factorial * $i; 
 }
 
 echo "The factorial of $n is $factorial";
+
+
+for($i=0; $i<=99; $i++){
+    // If number is less than 10, add a leading zero
+    if($i < 10){
+        echo "0".$i;
+    } else {
+        echo $i;
+    }
+
+    // Add comma and space except after the last number
+    if($i < 99){
+        echo ", ";
+    }
+}
+
+
 ?>
 
-
-
-// $a = 5;
-// $b = 10;
-
-// $result = $a * $b;
-
-// echo "The multiplication of $a and $b is $result";
-
-// ?>
