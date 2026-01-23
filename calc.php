@@ -1,9 +1,9 @@
 <?php
-// Initialize variables
+
 $num1 = $num2 = $result = "";
 $op = "";
 
-// Check if form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num1 = $_POST['num1'];
     $num2 = $_POST['num2'];
