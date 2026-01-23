@@ -16,7 +16,7 @@ for ($j = 1; $j <= 5; $j++) {
 $n = 5;
 $factorial = 1;
 
-for ($i = 1; $i <= $n; $i++) {
+for ($i = 1; $i <= 5; $i++) {
     $factorial = $factorial * $i; 
 }
 
@@ -24,14 +24,14 @@ echo "The factorial of $n is $factorial <br>";
 
 
 for($i=0; $i<=99; $i++){
-    // If number is less than 10, add a leading zero
+   
     if($i < 10){
         echo "0".$i;
     } else {
         echo $i;
     }
 
-    // Add comma and space except after the last number
+   
     if($i < 99){
         echo ", ";
     }
@@ -42,7 +42,8 @@ echo "<table cellpadding='3px' cellspacing='0px' border='1'>";
 for($i=1;$i<=6;$i++){
   echo "<tr>";
   for($j=1;$j<=5;$j++){
-    echo "<td>$i * $j = ".($i*$j)."</td>";
+    echo "<td>
+    $i * $j = ".($i*$j)."</td>";
   }
   echo "</tr>";
 }
@@ -81,32 +82,4 @@ for($i=1;$i<=7;$i++){
 }
 
 
-// $marks=49;
-// switch(true){
-//   case ($marks>=90): $grade="A"; break;
-//   case ($marks>=80): $grade="B"; break;
-//   case ($marks>=70): $grade="C"; break;
-//   case ($marks>=60): $grade="D"; break;
-//   case ($marks>=50): $grade="E"; break;
-//   case ($marks>=40): $grade="F"; break;
-//   case ($marks>=30): $grade="S"; break;
-//   default: $grade="U";
-// }
-// echo "Percentage: $marks%<br>Grade: $grade";
-
-
-
-// $a=20; $b=4; $op="+";
-// switch($op){
-//   case "+": $res=$a+$b; break;
-//   case "-": $res=$a-$b; break;
-//   case "*": $res=$a*$b; break;
-//   case "/": $res=$a/$b; break;
-//   default: $res="Invalid";
-// }
-// echo "Result: $res";
-
-
-
-?>
 
