@@ -70,13 +70,14 @@
         <h2>Enter Student Marks</h2>
         <form method="POST" action=" ">
             <label for="percentage">Percentage:</label>
-            <input type="number" name="percentage" id="percentage" min="0" max="100" required>
+            <input type="number" name="percentage" id="percentage" required>
             <button type="submit">Display Grade</button>
         </form>
 
         <div class="result">
             <?php
-            if (isset($_POST['percentage'])) {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
                 $marks = $_POST['percentage'];
                 $grade = "";
 
