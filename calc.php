@@ -1,3 +1,32 @@
+<?php
+// Initialize variables
+$num1 = $num2 = $result = "";
+$op = "";
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $op = $_POST['operator'];
+
+    switch ($op) {
+        case "+":
+            $result = $num1 + $num2;
+            break;
+        case "-":
+            $result = $num1 - $num2;
+            break;
+        case "*":
+            $result = $num1 * $num2;
+            break;
+        case "/":
+            $result = ($num2 != 0) ? $num1 / $num2 : "Cannot divide by zero";
+            break;
+        default:
+            $result = "Invalid operation";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +57,6 @@
         }
 
         input,
-        select,
         button {
             width: 100%;
             padding: 10px;
@@ -38,20 +66,24 @@
             border: 1px solid #ccc;
         }
 
-        button,
-        #button {
+        input[name="result"] {
+            background-color: #f0f0f0;
+        }
+
+        input[type="submit"] {
             background-color: #28a745;
             color: white;
             border: none;
             width: 50px;
+            margin-right: 5px;
         }
 
-        button:hover,
-        #button:hover {
+        input[type="submit"]:hover {
             background-color: #218838;
+            cursor: pointer;
         }
 
-        .result {
+        .result-display {
             margin-top: 20px;
             font-weight: bold;
             text-align: center;
@@ -64,62 +96,22 @@
 
     <div class="calculator">
         <h2>Simple Calculator</h2>
-        <form method="post" action=" ">
+        <form method="post">
             <label>First Number:</label>
-            <input type="number" name="num1" required>
+            <input type="number" name="num1" step="any" value="<?php echo htmlspecialchars($num1); ?>" required>
 
             <label>Second Number:</label>
-            <input type="number" name="num2" required>
+            <input type="number" name="num2" step="any" value="<?php echo htmlspecialchars($num2); ?>" required>
 
-            <label>Results:</label>
+            <label>Result:</label>
             <input name="result" value="<?php echo htmlspecialchars($result); ?>" readonly>
 
-            <label>Operation:</label>
-
-<div name="operator">
-    
-                <input type="button" value="+" id="button" name="operator">
-                <input type="button" value="x" id="button" name="operator">
-                <input type="button" value="-" id="button" name="operator">
-                <input type="button" value="/" id="button" name="operator"> <br>
-</div>
-
-            <button type="submit" id="button" style=" width: 210px; margin-left: 80px;">Calculate</button>
-
-
+            <label>Operation:</label><br>
+            <input type="submit" name="operator" value="+">
+            <input type="submit" name="operator" value="-">
+            <input type="submit" name="operator" value="*">
+            <input type="submit" name="operator" value="/">
         </form>
-
-        <div class="result">
-            <?php
-            $num1 = $num2 = $result = "";
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $num1 = $_POST['num1'];
-                $num2 = $_POST['num2'];
-                $op = $_POST['operator'];
-                $result = "";
-
-                switch ($op) {
-                    case "+":
-                        $result = $num1 + $num2;
-                        break;
-                    case "-":
-                        $result = $num1 - $num2;
-                        break;
-                    case "*":
-                        $result = $num1 * $num2;
-                        break;
-                    case "/":
-                        $result = ($num2 != 0) ? $num1 / $num2 : "Cannot divide by zero";
-                        break;
-                    default:
-                        $result = "Invalid operation";
-                }
-
-                echo "Result: " . $result;
-            }
-            ?>
-        </div>
     </div>
 
 </body>
