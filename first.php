@@ -75,5 +75,38 @@ for($i=2;$i<=10;$i++){
 echo "</table>";
 
 
+for($i=1;$i<=7;$i++){
+  if($i==4){ echo "*****<br>"; }
+  else{ echo "*&nbsp&nbsp&nbsp&nbsp&nbsp*<br>"; }
+}
+
+
+// $marks=49;
+// switch(true){
+//   case ($marks>=90): $grade="A"; break;
+//   case ($marks>=80): $grade="B"; break;
+//   case ($marks>=70): $grade="C"; break;
+//   case ($marks>=60): $grade="D"; break;
+//   case ($marks>=50): $grade="E"; break;
+//   case ($marks>=40): $grade="F"; break;
+//   case ($marks>=30): $grade="S"; break;
+//   default: $grade="U";
+// }
+// echo "Percentage: $marks%<br>Grade: $grade";
+
+
+
+// $a=20; $b=4; $op="+";
+// switch($op){
+//   case "+": $res=$a+$b; break;
+//   case "-": $res=$a-$b; break;
+//   case "*": $res=$a*$b; break;
+//   case "/": $res=$a/$b; break;
+//   default: $res="Invalid";
+// }
+// echo "Result: $res";
+
+
+
 ?>
 
