@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "-":
             $result = $num1 - $num2;
             break;
-        case "*":
+        case "x":
             $result = $num1 * $num2;
             break;
         case "/":
@@ -98,10 +98,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2>Simple Calculator</h2>
         <form method="post">
             <label>First Number:</label>
-            <input type="number" name="num1" step="any" value="<?php echo htmlspecialchars($num1); ?>" required>
+            <input type="number" name="num1" step="any" required>
 
             <label>Second Number:</label>
-            <input type="number" name="num2" step="any" value="<?php echo htmlspecialchars($num2); ?>" required>
+            <input type="number" name="num2" step="any" value= required>
 
             <label>Result:</label>
             <input name="result" value="<?php echo htmlspecialchars($result); ?>" readonly>
@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label>Operation:</label><br>
             <input type="submit" name="operator" value="+">
             <input type="submit" name="operator" value="-">
-            <input type="submit" name="operator" value="*">
+            <input type="submit" name="operator" value="x">
             <input type="submit" name="operator" value="/">
         </form>
     </div>
