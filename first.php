@@ -20,7 +20,7 @@ for ($i = 1; $i <= $n; $i++) {
     $factorial = $factorial * $i; 
 }
 
-echo "The factorial of $n is $factorial";
+echo "The factorial of $n is $factorial <br>";
 
 
 for($i=0; $i<=99; $i++){
@@ -36,6 +36,17 @@ for($i=0; $i<=99; $i++){
         echo ", ";
     }
 }
+
+
+echo "<table cellpadding='3px' cellspacing='0px' border='1'>";
+for($i=1;$i<=6;$i++){
+  echo "<tr>";
+  for($j=1;$j<=5;$j++){
+    echo "<td>$i * $j = ".($i*$j)."</td>";
+  }
+  echo "</tr>";
+}
+echo "</table>";
 
 
 ?>
