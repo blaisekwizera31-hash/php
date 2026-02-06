@@ -35,8 +35,18 @@ for($i=0; $i<=99; $i++){
    
     if($i < 10){
         echo "0".$i;
-    } else {
+    } 
+    else {
         echo $i;
+        if($i === 25){
+            echo "<br>";
+        }
+        else if($i === 50){
+            echo "<br>";
+        }
+        else if($i === 75){
+            echo "<br>";
+        }
     }
 
    
@@ -53,9 +63,9 @@ for($i=1;$i<=6;$i++){
     echo "<td>
     $i * $j = ".($i*$j)."</td>";
   }
-  echo "</tr>";
+   echo "</tr>";
 }
-echo "</table>";
+ echo "</table>";
 
 
 
