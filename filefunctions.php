@@ -1,7 +1,5 @@
 <?php
-if (rename("example.txt", "renamed.txt")) {
-    echo "done";
-} else {
-    echo "not done";
-}
-?>
+$file = fopen("renamed.txt", "r");
+$newfile = fgets($file);
+echo $newfile;
+fclose($file);
