@@ -1,0 +1,9 @@
+HELLO PEOPLE 
+THIS IS MY FIRST PHP TEXT
+HELLO PHP;
+
+<strong>KWIZERA<strong/>
+New line added by fwrite()
+New line added by fwrite()
+New line added by fwrite()
+New line added by fwrite()
