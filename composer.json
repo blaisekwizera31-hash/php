@@ -1,0 +1,15 @@
+{
+    "name": "vendor-name/phpfilefunctions",
+    "autoload": {
+        "psr-4": {
+            "VendorName\\Phpfilefunctions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "blaisekwizera31-hash",
+            "email": "blaisekwizera31@gmail.com"
+        }
+    ],
+    "require": {}
+}
