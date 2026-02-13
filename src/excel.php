@@ -14,7 +14,7 @@ $spreadsheet = new Spreadsheet();
 $sheet = $spreadsheet->getActiveSheet();
 $sheet->setTitle('Sales Report 2024');
 
-// --- SECTION 1: STYLING THE HEADER ---
+// --- SECTION 1: STYLINGchange THE HEADER ---
 $sheet->setCellValue('A1', 'MONTHLY REVENUE REPORT');
 $sheet->mergeCells('A1:D1'); // Merge across 4 columns
 
