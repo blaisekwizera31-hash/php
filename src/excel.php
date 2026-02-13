@@ -1,6 +1,6 @@
 <?php
 
-require " vendor/autoload.php";
+require  'vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -16,12 +16,20 @@ $newsheet = new Spreadsheet();
 $sheet = $newsheet->getActiveSheet();
 
 $sheet -> setCellValue('A1', 'Foodname');
-$sheet -> setCellValue('A2', 'price');
+$sheet -> setCellValue('B1', 'price');
 
 $newrow =2;
 
-foreach($food as $foods){
+foreach($foods as $food){
 
-$sheet -> setCellValue('A'. $newrow, $foods[Foodname] );
-$sheet -> setCellValue('B'. $newrow, $foods[price] );
+$sheet -> setCellValue('A'. $newrow, $food['Foodname'] );
+$sheet -> setCellValue('B'. $newrow, $food['price'] );
+
+$newrow++;
 }
+$writer = new Xlsx($newsheet);
+$wheretosave = 'folders/food.xlsx';
+$writer -> save($wheretosave);
+
+echo 'you did a great job';
+
