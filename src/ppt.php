@@ -26,9 +26,8 @@ try {
     // Let's add a text box to Slide 2
     $shape2 = $slide2->createRichTextShape()
         ->setHeight(100)
-        ->setWidth(600)
-        ->setOffsetX(180)
-        ->setOffsetY(100);
+        ->setWidth(600);
+       
         
     $textRun2 = $shape2->createTextRun('This is Slide Number 2');
     $textRun2->getFont()->setItalic(true)->setSize(40)->setColor(new Color('FF008000'));
