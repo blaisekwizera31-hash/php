@@ -27,7 +27,7 @@ try {
 
     // 6. Save the file to the same folder as this script
     $writer = IOFactory::createWriter($objPHPPresentation, 'PowerPoint2007');
-    $writer->save('test_output.pptx');
+    $writer->save('folders/test_output.pptx');
 
     echo "Success! File 'test_output.pptx' has been created.";
 
